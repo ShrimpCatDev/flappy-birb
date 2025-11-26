@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://d1pc344e6ggv"]
+[gd_scene load_steps=2 format=3 uid="uid://d1pc344e6ggv"]
+
+[ext_resource type="PackedScene" uid="uid://dpr8nut2kh7rq" path="res://birb.tscn" id="1_80nbo"]
 
 [node name="game" type="Node2D"]
+
+[node name="Birb" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(36, 109)
