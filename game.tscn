@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1pc344e6ggv"]
+[gd_scene load_steps=5 format=3 uid="uid://d1pc344e6ggv"]
 
 [ext_resource type="PackedScene" uid="uid://dpr8nut2kh7rq" path="res://birb.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://hmfd1j4cdlt1" path="res://assets/bg.png" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://d2j8yw75bfw18" path="res://bg.gd" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://b27ujrrad6q7y" path="res://pipe.tscn" id="3_fc0e3"]
 
 [node name="game" type="Node2D"]
 
@@ -15,6 +16,12 @@ script = ExtResource("2_fc0e3")
 texture_repeat = 2
 position = Vector2(128, 112)
 texture = ExtResource("1_feb5d")
+
+[node name="Pipe" parent="." instance=ExtResource("3_fc0e3")]
+position = Vector2(134, 87)
+
+[node name="Pipe" parent="Pipe" instance=ExtResource("3_fc0e3")]
+position = Vector2(100, 58)
 
 [node name="Birb" parent="." instance=ExtResource("1_80nbo")]
 position = Vector2(36, 109)
